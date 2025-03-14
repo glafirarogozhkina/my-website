@@ -1,0 +1,262 @@
+/* Определяем CSS-переменные для светлой и тёмной тем */
+:root {
+  --background-light: #FFE4E1;
+  --text-light: #1A530A;
+  --background-dark: #0F2D10;
+  --text-dark: #FFE8F1;
+}
+
+/* Применяем шрифт Montserrat ко всему документу */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Тёмная тема */
+.dark-theme {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* Стили для header и footer */
+header, footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+  margin: 10px 0;
+}
+
+/* Кнопка переключения темы */
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--text-light);
+  color: var(--background-light);
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Параграфы */
+p {
+  line-height: 1.6;
+}
+
+/* Стили для изображений: сглаженные углы */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin: 10px 0;
+}
+
+/* Контейнер для нескольких фото в ряд */
+.photo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.photo-row img {
+  flex: 1;
+  min-width: 150px;
+  max-width: 48%;  /* Каждое фото будет занимать не более 48% ширины */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .photo-row {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    max-width: 900px;
+    margin: auto;
+  }
+}
+
+/* Стили для секции о себе */
+.about-container {
+  display: flex;
+  flex-direction: row;  /* Располагаем элементы в строку */
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-photo {
+  flex: 0 0 400px; 
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 480px) {
+  header, footer {
+    font-size: 14px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-photo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-photo img {
+    width: 80%;
+  }
+
+  .photo-row {
+    flex-direction: column;
+  }
+}
+
+/* Стили для семьи */
+.family-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.family-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 45%;
+}
+
+.family-photo img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.family-text {
+  text-align: center;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.right-text {
+  text-align: right;
+}
+
+/* Путешествия */
+.travel-photo img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 15px;
+  margin: 20px auto;
+  display: block;
+}
+
+#travel h2, #sport h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 20px;
+}
+ul {
+  list-style-type: disc;  /* Стиль маркеров — круглые точки */
+  margin-left: 20px;       /* Отступ слева */
+  line-height: 1.6;        /* Высота строки для лучшей читаемости */
+}
+
+li {
+  margin-bottom: 8px;      /* Отступ между элементами списка */
+}
+
+#sport p {
+  text-align: center;
+  line-height: 1.6;
+}
+
+.photo-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.photo-row img {
+  max-width: 48%;
+  border-radius: 15px;
+}
+
+/* Тренировка в зале */
+.gym-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gym-text {
+  flex: 1;
+  max-width: 33%;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.gym-photo img {
+  max-width: 100%;
+  border-radius: 15px;
+  max-width: 300px;
+}
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px; /* Закругление углов */
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: scale(1.05); /* Немного увеличиваем элемент */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Увеличиваем тень */
+}
+.card2 {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px; /* Закругление углов */
+  padding: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Уменьшена интенсивность тени */
+}
+
+.card2:hover {
+  transform: scale(1.05); /* Немного увеличиваем элемент */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Увеличиваем тень, но остаётся более минимальной */
+}
+

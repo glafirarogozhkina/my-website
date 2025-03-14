@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обо мне</title>
+  <!-- Подключаем шрифт Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-theme">
+<button id="theme-toggle">Сменить тему</button>
+  <header>
+    <h1>Здравствуйте!</h1>
+  </header>
+  
+<section id="about">
+  <div class="about-container">
+    <div class="about-text">
+      <p>Меня зовут Глафира! В школе шутили, что меня назвали в честь любимой собаки, но это не так. Это сайт обо мне и о том, что я люблю.</p>
+    </div>
+    <div class="about-photo">
+	  <div class="card">
+      <img src="images/profile.jpg" alt="Моё фото">
+	 </div> 
+    </div>
+  </div>
+</section>
+
+  
+<section id="family">
+  <h2>Это моя семья</h2>
+  <div class="family-container">
+    <div class="family-photo">
+	<div class="card">
+      <img src="images/family1.jpg" alt="Семейное фото 1">
+      <div class="family-text left-text">
+        <p>В семье нас пятеро, 0,8 семьи - женщины, надеюсь папа очень рад.</p>
+      </div>
+	  </div>
+    </div>
+    <div class="family-photo">
+	<div class="card">
+      <img src="images/family2.jpg" alt="Семейное фото 2">
+      <div class="family-text right-text">
+        <p>А здесь моя младшая сестра идет в первый класс, уже третья Рогожкина свалилась на голову 82 Лицея</p>
+      </div>
+	  </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  
+<section id="travel">
+  <!-- Фото перед заголовком -->
+  <div class="travel-photo">
+  <div class="card2">
+    <img src="images/travel-header.jpg" alt="Фото путешествий">
+  </div>
+  </div>
+  
+  <!-- Заголовок путешествий -->
+  <h2>Путешествия</h2>
+  
+  <p>Конечно же, я очень люблю путешествовать, кстати фотографию выше, я сделала сама на свой фотоаппарат. В детстве мы с родителями путешествовали по Европе и мне это очень нравилось. Сейчас места и компания чуть-чуть изменилась, но я все равно радуюсь каждой возможности куда-нибудь съездить.</p>
+  <div class="card2">
+  <img src="images/travel.jpg" alt="Фото из путешествия 1">
+  </div>
+  <h3>Делаю я это, конечно же, не одна</h3>
+  <p>Например, на фото мы посетили такие города как</p>
+  <ul>
+    <li>Сочи</li>
+    <li>Казань</li>
+    <li>Москва</li>
+  </ul>
+  <!-- Несколько фото в ряд -->
+  <div class="photo-row">
+    <img src="images/travel2.jpg" alt="Фото из путешествия 2">
+    <img src="images/travel3.jpg" alt="Фото из путешествия 3">
+  </div>
+</section>
+
+  
+<section id="sport">
+  <!-- Заголовок Спорт, выравниваем по центру -->
+  <h2>Спорт!</h2>
+  
+  <!-- Текст про спорт, выровненный по центру -->
+  <p>Его я тоже очень сильно люблю, пусть и получается у меня не очень.</p>
+  
+  <!-- Два фото на лыжах в строчку -->
+  <div class="photo-row">
+    <img src="images/ski1.jpg" alt="Горные лыжи 1">
+    <img src="images/ski2.jpg" alt="Горные лыжи 2">
+  </div>
+  
+  <!-- Текст про катание на лыжах -->
+  <p>Я люблю кататься на горных лыжах, правда до идеального катания еще очень далеко.</p>
+  
+  <!-- Фото из зала с текстом о подтягиваниях -->
+  <div class="gym-container">
+    <div class="gym-text">
+      <p>Ну а еще стабильно хожу в зал и даже умею подтягиваться 7 раз! (с самой тугой резинкой...)</p>
+    </div>
+    <div class="gym-photo">
+      <img src="images/gym.jpg" alt="Тренировка в зале">
+    </div>
+  </div>
+</section>
+
+  
+  <footer>
+    <p>Конец! На этом пока все, ждите следующую часть)</p>
+    <p><a href="https://instagram.com/glafirarogozhkina">Мой инстаграмм</a></p>
+	<p><a href="https://t.me/glafro">Мой телеграмм</a></p>
+  </footer>
+  
+  <script>
+    // JavaScript для переключения темы
+    document.getElementById("theme-toggle").addEventListener("click", function() {
+      document.body.classList.toggle("dark-theme");
+      document.body.classList.toggle("light-theme");
+    });
+  </script>
+</body>
+</html>
